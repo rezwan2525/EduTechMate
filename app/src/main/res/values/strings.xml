@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">EduTechMate</string>
+
+    <string name="tools_program_text">C Program</string>
+    <string name="tools_html_text">HTML</string>
+    <string name="hide_it_text">লুকান</string>
+    <string name="code_from_text">ছবি হতে কোড</string>
+    <string name="run_text">রান করুন</string>
+    <string name="test_text"></string>
+    <string name="code_output_title_text">আউটপুট</string>
+    <string name="code_input_title_text">ইনপুট</string>
+    <string name="code_input_if_any_title_text">ইনপুট (যদি থাকে)</string>
+
+    <string name="c_code_instruction_text">* সি কোড রান করতে ইন্টারনেট সংযোগ প্রয়োজন  \n* ছবি থেকে কোড করার জন্য শুধুমাত্র প্রথমবার ইন্টারনেটের প্রয়োজন</string>
+    <string name="html_code_instruction_text">* কোডের ছবি তুলে সেটাকে কোডে পরিণত করতে পারবেন\n* ছবি থেকে কোড করার জন্য শুধুমাত্র প্রথমবার ইন্টারনেটের প্রয়োজন</string>
+
 </resources>
