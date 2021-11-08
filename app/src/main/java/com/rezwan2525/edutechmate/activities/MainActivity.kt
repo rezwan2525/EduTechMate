@@ -19,5 +19,12 @@ class MainActivity: AppCompatActivity() {
                 startActivity(this);
             }
         }
+
+        findViewById<CardView>(R.id.card_biology_ar).setOnClickListener{
+            Toast.makeText(this, "Clicked on Biology AR", Toast.LENGTH_LONG).show();
+            Intent(this, ArListActivity::class.java).apply{
+                startActivity(this);
+            }
+        }
     }
 }
