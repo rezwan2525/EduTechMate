@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.google.ar.sceneform.rendering.ModelRenderable
 import com.rezwan2525.edutechmate.R
 
 class MainActivity: AppCompatActivity() {

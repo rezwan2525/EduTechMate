@@ -1,25 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_margin="@dimen/_6sdp"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:elevation="@dimen/_5sdp"
+    android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <ImageView
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_100sdp"
-        android:layout_gravity="center"
-        android:id="@+id/iv_item_image"
-        />
-
-    <TextView
+    android:layout_margin="@dimen/_3sdp"
+    >
+    <LinearLayout android:orientation="vertical"
+        android:layout_margin="@dimen/_6sdp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Hello world"
-        android:id="@+id/tv_title"
-        android:textSize="@dimen/_14sdp"
-        android:textColor="@color/colorTextBlack"
-        />
+        android:layout_height="wrap_content">
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="@dimen/_4sdp"
+            >
+            <ImageView
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="@dimen/_85sdp"
+                android:layout_gravity="center"
+                android:id="@+id/iv_item_image"
+                />
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:id="@+id/iv_lock_image"
+                android:src="@drawable/ic_baseline_lock_24"
+                android:layout_margin="@dimen/_10sdp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_22sdp"
+            android:gravity="center"
+            android:text="Hello world"
+            android:id="@+id/tv_title"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:background="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

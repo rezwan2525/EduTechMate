@@ -1,3 +1,6 @@
 package com.rezwan2525.edutechmate.models
 
-data class ArItem (var id: Int, var title: String, var image: String, var modelUrl:String)
+import java.io.Serializable
+
+data class ArItem(var id: Int, var title: String, var image: String,
+                  var modelUrl:String, var isLocked: Boolean, var price: Int):Serializable
