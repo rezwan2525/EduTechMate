@@ -27,7 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
         mPhone = findViewById(R.id.et_phone_number);
 
         //TESTING
-        mName.setText("Pranto");
+        mName.setText("Rezwan");
         mPhone.setText("+8801842535625");
 
         if(isSavedAlready()){
@@ -71,6 +71,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void gotoMainActivity() {
         Intent intent =  new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
         overridePendingTransition(android.R.anim.slide_in_left,
                 android.R.anim.slide_out_right);
     }
