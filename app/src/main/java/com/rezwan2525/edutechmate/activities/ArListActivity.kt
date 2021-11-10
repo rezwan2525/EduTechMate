@@ -33,7 +33,8 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class ArListActivity : AppCompatActivity() {
-
+    lateinit var arListAdapter: ArListAdapter
+    lateinit var layoutManager: RecyclerView.LayoutManager
     val aritemList = ArrayList<ArItem>()
     lateinit var name:String
     lateinit var phone:String
@@ -41,6 +42,7 @@ class ArListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         var binding = inflate(layoutInflater)
         setContentView(binding.root)
+
 
         name = getSharedPreferences(Constants.SHARED_PREF_NAME, MODE_PRIVATE)
             .getString(Constants.SHARED_NAME, "{NAME}").toString()
