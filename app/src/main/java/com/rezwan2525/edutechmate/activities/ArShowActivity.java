@@ -30,6 +30,7 @@ import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.BaseArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
 import com.rezwan2525.edutechmate.R;
+import com.rezwan2525.edutechmate.commons.Constants;
 import com.rezwan2525.edutechmate.models.ArItem;
 
 import java.lang.ref.WeakReference;
@@ -58,7 +59,7 @@ public class ArShowActivity extends AppCompatActivity implements
                         .add(R.id.arFragment, ArFragment.class, null)
                         .commit();
             }
-            arItem = (ArItem) getIntent().getSerializableExtra("data");
+            arItem = (ArItem) getIntent().getSerializableExtra(Constants.ARITEM_OBJECT_PASSING_KEY);
         }
         Log.d("TAG_ArShow", "ModelURL: "+arItem.getModelUrl());
         //loadModels("https://storage.googleapis.com/ar-answers-in-search-models/static/Tiger/model.glb");
