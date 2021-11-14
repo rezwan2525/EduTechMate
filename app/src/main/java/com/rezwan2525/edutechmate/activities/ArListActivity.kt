@@ -2,6 +2,7 @@ package com.rezwan2525.edutechmate.activities
 
 import android.app.Dialog
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -42,6 +43,7 @@ class ArListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         var binding = inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar!!.setTitle("AR Visualization Item List")
 
 
         name = getSharedPreferences(Constants.SHARED_PREF_NAME, MODE_PRIVATE)
@@ -49,12 +51,18 @@ class ArListActivity : AppCompatActivity() {
         phone = getSharedPreferences(Constants.SHARED_PREF_NAME, MODE_PRIVATE)
             .getString(Constants.SHARED_PHONE, "{PHONE}").toString()
 
-        for(i in 1..10){
-            aritemList.add(ArItem(i, "Title "+i, "http://i.imgur.com/DvpvklR.png",
-                ""+i, true, i, ""))
-        }
-        aritemList.add(ArItem(11, "Title "+11, "http://i.imgur.com/DvpvklR.png",
-            ""+11, false, 10, ""))
+        val humanbrain = Uri.parse("file:///android_asset/humanbrain.glb").toString()
+
+        aritemList.add(ArItem(9, "Tiger", "https://preview.free3d.com/img/2017/01/2273009081591531162/gmbk8qeq-900.jpg", "https://storage.googleapis.com/ar-answers-in-search-models/static/Tiger/model.glb", false, 50, "For More Study of 'Human Brain' please check out : rkpranto.com"))
+        aritemList.add(ArItem(1, "Eye Ball", "https://edutechmate.rkpranto.com/models/eyeball.jpg", "https://edutechmate.rkpranto.com/models/eyeball.glb", true, 100, "For More Study of 'Eye Ball' please check out : rkpranto.com"))
+        aritemList.add(ArItem(2, "Skeleton", "https://edutechmate.rkpranto.com/models/skeleton.jpg", "https://edutechmate.rkpranto.com/models/skeleton.glb", true, 160, "For More Study of 'Skeleton' please check out : rkpranto.com"))
+        aritemList.add(ArItem(3, "Human Brain", "https://edutechmate.rkpranto.com/models/humanbrain.jpg", "https://edutechmate.rkpranto.com/models/humanbrain.glb", true, 80, "For More Study of 'Human Brain' please check out : rkpranto.com"))
+        //aritemList.add(ArItem(3, "Human Brain", "https://edutechmate.rkpranto.com/models/humanbrain.jpg", humanbrain, false, 80, "For More Study of 'Human Brain' please check out : rkpranto.com"))
+        aritemList.add(ArItem(4, "Atom", "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Stylised_atom_with_three_Bohr_model_orbits_and_stylised_nucleus.svg/220px-Stylised_atom_with_three_Bohr_model_orbits_and_stylised_nucleus.svg.png", "https://storage.googleapis.com/ar-answers-in-search-models/static/Tiger/model.glb", true, 80, "For More Study of 'ATOM' please check out : https://en.wiktionary.org/wiki/atom"))
+        aritemList.add(ArItem(5, "Heart", "https://preview.free3d.com/img/2019/04/2154878575000422342/o4zejhq3-900.jpg", "https://storage.googleapis.com/ar-answers-in-search-models/static/Tiger/model.glb", true, 80, "For More Study of 'Human Brain' please check out : rkpranto.com"))
+        aritemList.add(ArItem(6, "Earth", "https://images.pond5.com/crystallised-low-poly-cartoon-earth-3d-070059966_iconl.jpeg", "https://storage.googleapis.com/ar-answers-in-search-models/static/Tiger/model.glb", true, 86, "For More Study of 'Human Brain' please check out : rkpranto.com"))
+        aritemList.add(ArItem(7, "Cell", "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/145919274/original/4abe8e552034784b6cecf8c491ad15df0e6e6149/create-3d-models-for-video-or-game-ready-topology.png", "https://storage.googleapis.com/ar-answers-in-search-models/static/Tiger/model.glb", true, 82, "For More Study of 'Human Brain' please check out : rkpranto.com"))
+        aritemList.add(ArItem(8, "DNA", "https://preview.free3d.com/img/2006/03/1871191458841625670/l0oh58p6-900.jpg", "https://storage.googleapis.com/ar-answers-in-search-models/static/Tiger/model.glb", true, 180, "For More Study of 'Human Brain' please check out : rkpranto.com"))
 
         binding.recyclerArItemList.apply {
             this.adapter = ArListAdapter(aritemList,
@@ -66,7 +74,7 @@ class ArListActivity : AppCompatActivity() {
                         else{
                             showLockedDialog(item)
                         }
-                        //Toast.makeText(this@ArListActivity, item.title , Toast.LENGTH_LONG).show();
+                        // Toast.makeText(this@ArListActivity, item.title , Toast.LENGTH_LONG).show();
                     }
                 }
             )

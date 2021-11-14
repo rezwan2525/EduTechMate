@@ -127,7 +127,7 @@ public class ArShowActivity extends AppCompatActivity implements
     @Override
     public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
         if (model == null || viewRenderable == null) {
-            Toast.makeText(this, "Loading...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Downloading 3D model, wait a few minutes...don't close", Toast.LENGTH_LONG).show();
             return;
         }
 
